@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - RAZANANIRIANA Tokyo Nomenjanahary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accentGreen: "#22c55e",
+            accentPurple: "#a855f7",
+            panel: "#121523",
+            panelSoft: "#1a1f31",
+          },
+          boxShadow: {
+            neon: "0 0 35px rgba(34, 197, 94, 0.18)",
+          },
+          backgroundImage: {
+            gridGlow:
+              "radial-gradient(circle at 10% 10%, rgba(168,85,247,0.12), transparent 30%), radial-gradient(circle at 75% 35%, rgba(34,197,94,0.12), transparent 35%)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --bg: #090b14;
+      --text: #e7e9f3;
+    }
+
+    html,
+    body {
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+        Helvetica, Arial, sans-serif;
+    }
+
+    .noise-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.35) 0.45px,
+          transparent 0.45px);
+      background-size: 3px 3px;
+      z-index: 0;
+    }
+
+    .fade-start {
+      opacity: 0;
+      transform: translateY(26px) scale(0.985);
+      filter: blur(3px);
+      transition: opacity 700ms ease, transform 700ms ease, filter 700ms ease;
+    }
+
+    .fade-start.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    .float-in {
+      animation: floatIn 1s ease forwards;
+    }
+
+    @keyframes floatIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .line-clamp-3 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-clamp: 3;
+    }
+  </style>
+</head>
+
+<body class="bg-gridGlow">
+  <div class="noise-overlay"></div>
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <header
+      class="sticky top-3 z-30 mb-6 rounded-xl border border-white/10 bg-panel/85 backdrop-blur px-4 py-3 fade-start">
+      <nav class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-medium">
+        <a href="#apropos" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition">A propos</a>
+        <a href="#competences" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition">Competences</a>
+        <a href="#experiences" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition">Experiences</a>
+        <a href="#education" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition">Education</a>
+        <a href="#projets" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition">Projets</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition">Contact</a>
+      </nav>
+    </header>
+    <section id="apropos" class="mt-8 fade-start scroll-mt-28 sm:scroll-mt-32">
+    </section>
+    <section id="hero"
+      class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#0f1324] to-[#0b0f1b] p-5 sm:p-8 shadow-neon fade-start">
+      <header class="flex flex-col gap-6">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+          <div>
+            <p class="uppercase tracking-[0.25em] text-xs text-white/50">Développeur web Full Stack</p>
+            <h1 class="mt-2 text-3xl sm:text-5xl font-black leading-[0.95] max-w-xl">
+              RAZANANIRIANA
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentGreen">
+                TOKY NOMENJANAHARY
+              </span>
+            </h1>
+            <p class="mt-4 text-sm leading-relaxed text-white/75 text-justify">
+              Développeur web passionné, spécialisé en PHP (Laravel), Drupal et Vue.js, je conçois des applications
+              performantes, modernes et adaptées aux besoins métiers. Fort d’une expérience en développement back-end et
+              en intégration front-end, je transforme des maquettes en interfaces interactives et développe des
+              solutions robustes basées sur des API. Autonome et rigoureux, je sais analyser les problématiques
+              techniques et proposer des solutions efficaces tout en respectant les délais. En veille technologique
+              constante, j’améliore continuellement mes compétences afin de rester à jour avec les évolutions du web.
+            </p>
+          </div>
+          <div class="w-full bg-panel/85 border border-white/10 rounded-xl p-3 backdrop-blur">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
+              alt="Portrait representatif" class="w-full h-64 object-cover rounded-lg border border-white/10" />
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact"
+            class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-white text-sm font-semibold hover:scale-[1.03] transition">
+            Me contacter
+          </a>
+          <a href="RAZANANIRIANA-TOKY-CV.pdf" download="RAZANANIRIANA-TOKY-CV.pdf" 
+          class="px-5 py-2.5 rounded-lg border border-white/15 bg-white/5 text-sm font-semibold hover:bg-white/10 transition inline-block">
+         Telecharger CV
+       </a>
+        </div>
+      </header>
+    </section>
+
+    <section id="competences" class="mt-8 fade-start scroll-mt-28 sm:scroll-mt-32">
+      <h2 class="text-2xl font-bold mb-4">
+        Competences
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentGreen">
+          techniques
+        </span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <article class="rounded-xl bg-panelSoft border border-white/10 p-4">
+          <h3 class="font-semibold">PHP / Backend</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentGreen/50 bg-accentGreen/15">Laravel</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentPurple/50 bg-accentPurple/15">Drupal</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">API REST</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">MySQL</span>
+          </div>
+        </article>
+        <article class="rounded-xl bg-panelSoft border border-white/10 p-4">
+          <h3 class="font-semibold">Front-end / JS</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentGreen/50 bg-accentGreen/15">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentPurple/50 bg-accentPurple/15">Vue.js</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">HTML5</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">CSS3</span>
+          </div>
+        </article>
+        <article class="rounded-xl bg-panelSoft border border-white/10 p-4">
+          <h3 class="font-semibold">Frameworks UI</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentPurple/50 bg-accentPurple/15">Tailwind CSS</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentGreen/50 bg-accentGreen/15">Bootstrap</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">Responsive Design</span>
+          </div>
+        </article>
+        <article class="rounded-xl bg-panelSoft border border-white/10 p-4">
+          <h3 class="font-semibold">Outils & Methodes</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentGreen/50 bg-accentGreen/15">Git / GitHub</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-accentPurple/50 bg-accentPurple/15">Methodes agiles</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">Tests</span>
+            <span class="px-2.5 py-1 rounded-full text-xs border border-white/20 bg-white/5">Debugging</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiences" class="mt-8 fade-start scroll-mt-28 sm:scroll-mt-32">
+      <h2 class="text-2xl font-bold mb-4">
+        Parcours
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentGreen">
+          professionnel
+        </span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="rounded-xl bg-panel border border-white/10 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/50">Nov. 2023 - Mars 2026</p>
+          <h3 class="mt-2 font-semibold">Développeur PHP / VueJs</h3>
+          <p class="mt-2 text-sm text-white/75">Personnalisation de thèmes Drupal, création de modules sur mesure,
+            intégration Vue.js, transformation de maquettes Figma en interfaces modernes.</p>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/50">Déc. 2022 - Sept. 2023</p>
+          <h3 class="mt-2 font-semibold">Développeur PHP</h3>
+          <p class="mt-2 text-sm text-white/75">Développement et maintenance d'une application web de
+            location/colocation d'appartements avec Laravel chez Tictac Family.</p>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/50">Juin 2022 - Nov. 2022</p>
+          <h3 class="mt-2 font-semibold">Développeur PHP</h3>
+          <p class="mt-2 text-sm text-white/75">Développement d'une application de gestion de plans de formation chez
+            NUMERIKA Analamahitsy.</p>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/50">Fév. 2022 - Juin 2022</p>
+          <h3 class="mt-2 font-semibold">Développeur PHP</h3>
+          <p class="mt-2 text-sm text-white/75">Développement d'une marketplace en mode agile avec Laravel,
+            transformation de maquettes UI/UX avec Bootstrap 4.</p>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/50">Stage</p>
+          <h3 class="mt-2 font-semibold">Stagiaire Développeur PHP</h3>
+          <p class="mt-2 text-sm text-white/75">Stage en développement web au Ministère de l'Éducation Nationale à
+            Anosy.</p>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-white/50">Stage</p>
+          <h3 class="mt-2 font-semibold">Stagiaire Développeur Ruby on Rails</h3>
+          <p class="mt-2 text-sm text-white/75">Réalisation du projet MADAFULLCAR (plateforme de vente/location de
+            voitures) chez SAYNA Madagascar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="mt-8 grid lg:grid-cols-3 gap-4 fade-start scroll-mt-28 sm:scroll-mt-32">
+      <div class="lg:col-span-2 rounded-xl border border-white/10 bg-panel p-5">
+        <h2 class="text-2xl font-bold">
+          Education
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentGreen">
+            & formation
+          </span>
+        </h2>
+        <div class="mt-4 grid sm:grid-cols-2 gap-3">
+          <div class="rounded-lg bg-panelSoft border border-white/10 p-4">
+            <p class="text-xs text-white/60">En cours</p>
+            <p class="font-medium mt-1">Master 2 en informatique</p>
+            <p class="text-xs text-white/50 mt-1">Base de Données et Génie Logiciel - CNTEMAD Madagascar (2025)</p>
+          </div>
+          <div class="rounded-lg bg-panelSoft border border-white/10 p-4">
+            <p class="text-xs text-white/60">2024</p>
+            <p class="font-medium mt-1">Master 1 en informatique</p>
+            <p class="text-xs text-white/50 mt-1">CNTEMAD Madagascar</p>
+          </div>
+          <div class="rounded-lg bg-panelSoft border border-white/10 p-4">
+            <p class="text-xs text-white/60">2023</p>
+            <p class="font-medium mt-1">Licence 3 en informatique</p>
+            <p class="text-xs text-white/50 mt-1">Base de Données et Génie Logiciel - CNTEMAD Madagascar</p>
+          </div>
+          <div class="rounded-lg bg-panelSoft border border-white/10 p-4">
+            <p class="text-xs text-white/60">2019</p>
+            <p class="font-medium mt-1">The Hacking Project</p>
+            <p class="text-xs text-white/50 mt-1">SAYNA Madagascar</p>
+          </div>
+          <div class="rounded-lg bg-panelSoft border border-white/10 p-4">
+            <p class="text-xs text-white/60">2018</p>
+            <p class="font-medium mt-1">BACC Série C</p>
+            <p class="text-xs text-white/50 mt-1">LMA Ampefiloha</p>
+          </div>
+        </div>
+      </div>
+      <aside class="rounded-xl border border-white/10 bg-panel p-5">
+        <h3 class="font-semibold">Langues</h3>
+        <div class="mt-4 space-y-3 text-sm">
+          <div class="flex justify-between"><span>Malagasy</span><span>Natif</span></div>
+          <div class="flex justify-between"><span>Français</span><span>Courant</span></div>
+          <div class="flex justify-between"><span>Anglais</span><span>Intermédiaire</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projets" class="mt-8 fade-start scroll-mt-28 sm:scroll-mt-32">
+      <h2 class="text-2xl font-bold mb-4">
+        Projets
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accentPurple to-accentGreen">
+          recents
+        </span>
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <article class="rounded-xl bg-panel border border-white/10 p-4">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80"
+            alt="Application de location" class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="font-semibold">Application de location / colocation</h3>
+          <p class="mt-2 text-xs text-white/70">Développement et maintenance d'une application web de location
+            d'appartements avec Laravel.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Application de location / colocation"
+            data-description="Participation au développement et à la maintenance d'une application web de location et colocation d'appartements avec Laravel chez Tictac Family."
+            data-tech="PHP, Laravel, MySQL, Bootstrap"
+            data-image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80">
+            Voir
+          </button>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-4">
+          <img src="https://images.unsplash.com/photo-1551281044-8b7bd6d6d5ab?auto=format&fit=crop&w=1200&q=80"
+            alt="Gestion de plans de formation" class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="font-semibold">Gestion de plans de formation</h3>
+          <p class="mt-2 text-xs text-white/70">Application web pour gérer les plans de formation en entreprise.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Gestion de plans de formation"
+            data-description="Développement d'une application web de gestion des plans de formation pour entreprise chez NUMERIKA."
+            data-tech="PHP, MySQL, Laravel"
+            data-image="https://images.unsplash.com/photo-1551281044-8b7bd6d6d5ab?auto=format&fit=crop&w=1200&q=80">
+            Voir
+          </button>
+        </article>
+        <article class="rounded-xl bg-panel border border-white/10 p-4">
+          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+            alt="Marketplace" class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="font-semibold">Marketplace</h3>
+          <p class="mt-2 text-xs text-white/70">Développement d'une marketplace en mode agile avec Laravel.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Marketplace"
+            data-description="Participation au développement d'un projet de marketplace en mode agile, implémentation des fonctionnalités avec Laravel et transformation de maquettes UI/UX."
+            data-tech="PHP, Laravel, Bootstrap 4, JavaScript, Figma"
+            data-image="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80">
+            Voir
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-8 fade-start scroll-mt-28 sm:scroll-mt-32">
+      <div class="rounded-2xl border border-white/10 bg-panel p-5 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold">Disponible pour de nouvelles opportunites</h2>
+        <p class="text-sm text-white/70 mt-2 max-w-2xl">
+          Que ce soit pour un stage, une alternance ou un emploi, je suis disponible pour discuter de votre projet.
+        </p>
+
+        <div class="mt-6 grid lg:grid-cols-2 gap-5">
+          <aside class="rounded-xl bg-panelSoft border border-white/10 p-5">
+            <h3 class="text-lg font-semibold">Mes informations</h3>
+            <p class="text-sm text-white/70 mt-2">
+              N'hesitez pas a me contacter directement par email ou par telephone.
+            </p>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="flex items-start justify-between gap-4 border-b border-white/10 pb-3">
+                <span class="text-white/60">Email</span>
+                <span class="font-medium text-right">razananirianatoky@gmail.com</span>
+              </li>
+              <li class="flex items-start justify-between gap-4 border-b border-white/10 pb-3">
+                <span class="text-white/60">WhatsApp</span>
+                <span class="font-medium text-right">+261 34 53 225 10</span>
+              </li>
+              <li class="flex items-start justify-between gap-4 border-b border-white/10 pb-3">
+                <span class="text-white/60">Telephone</span>
+                <span class="font-medium text-right">+261 34 53 225 10</span>
+              </li>
+              <li class="flex items-start justify-between gap-4">
+                <span class="text-white/60">Adresse</span>
+                <span class="font-medium text-right">B 411 Anatihazo Isotry</span>
+              </li>
+            </ul>
+          </aside>
+
+          <div class="rounded-xl bg-panelSoft border border-white/10 p-5">
+            <h3 class="text-lg font-semibold">Formulaire de contact</h3>
+            <form id="contactForm" class="grid md:grid-cols-2 gap-3 mt-4">
+              <input type="text" id="nom" name="nom" placeholder="Nom" required
+                class="w-full rounded-lg bg-panel border border-white/10 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accentPurple" />
+              <input type="email" id="email" name="email" placeholder="Email" required
+                class="w-full rounded-lg bg-panel border border-white/10 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accentPurple" />
+              <textarea id="message" name="message" placeholder="Message" rows="4" required
+                class="md:col-span-2 w-full rounded-lg bg-panel border border-white/10 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accentPurple"></textarea>
+              <button type="submit"
+                class="md:col-span-2 justify-self-start px-6 py-2.5 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen font-semibold hover:brightness-110 transition">
+                Envoyer le message
+              </button>
+            </form>
+            <div id="formStatus" class="mt-3 text-sm hidden"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="projet-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4"
+      aria-hidden="true">
+      <div class="w-full max-w-2xl rounded-2xl border border-white/10 bg-panel p-4 sm:p-6 relative">
+        <button type="button" id="fermer-modal"
+          class="absolute top-3 right-3 rounded-lg bg-white/10 hover:bg-white/20 px-3 py-1 text-sm">
+          Fermer
+        </button>
+        <img id="modal-image" src="" alt="Apercu projet"
+          class="w-full h-56 sm:h-72 object-cover rounded-lg border border-white/10" />
+        <h3 id="modal-titre" class="mt-4 text-xl font-bold"></h3>
+        <p id="modal-description" class="mt-2 text-sm text-white/75"></p>
+        <p class="mt-3 text-xs uppercase tracking-widest text-white/50">Technologies utilisees</p>
+        <p id="modal-tech" class="mt-1 text-sm text-white/90"></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const animated = document.querySelectorAll(".fade-start");
+      animated.forEach((el, i) => {
+        setTimeout(() => el.classList.add("show"), i * 100);
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.18, rootMargin: "0px 0px -30px 0px" }
+      );
+
+      document.querySelectorAll("section, article, aside").forEach((node) => {
+        if (!node.classList.contains("show")) {
+          node.classList.add("fade-start");
+          observer.observe(node);
+        }
+      });
+
+      const modal = document.getElementById("projet-modal");
+      const fermerModalBtn = document.getElementById("fermer-modal");
+      const modalTitre = document.getElementById("modal-titre");
+      const modalDescription = document.getElementById("modal-description");
+      const modalTech = document.getElementById("modal-tech");
+      const modalImage = document.getElementById("modal-image");
+
+      document.querySelectorAll(".btn-projet").forEach((button) => {
+        button.addEventListener("click", () => {
+          modalTitre.textContent = button.dataset.titre || "";
+          modalDescription.textContent = button.dataset.description || "";
+          modalTech.textContent = button.dataset.tech || "";
+          modalImage.src = button.dataset.image || "";
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      const fermerModal = () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modal.setAttribute("aria-hidden", "true");
+      };
+
+      fermerModalBtn.addEventListener("click", fermerModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) fermerModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("flex")) fermerModal();
+      });
+    });
+
+    // Formulaire de contact avec FormSubmit.co
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const nom = document.getElementById('nom').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Afficher le chargement
+        formStatus.textContent = 'Envoi en cours...';
+        formStatus.className = 'mt-3 text-sm text-blue-400';
+        formStatus.classList.remove('hidden');
+        
+        // Préparer les données pour FormSubmit
+        const formData = new FormData();
+        formData.append('nom', nom);
+        formData.append('email', email);
+        formData.append('message', message);
+        formData.append('_captcha', 'false');
+        formData.append('_template', 'table');
+        
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/razananirianatoky@gmail.com', {
+            method: 'POST',
+            body: formData
+          });
+          
+          if (response.ok) {
+            formStatus.textContent = '✅ Message envoyé avec succès ! Je vous répondrai rapidement.';
+            formStatus.className = 'mt-3 text-sm text-green-400';
+            contactForm.reset();
+            
+            setTimeout(() => {
+              formStatus.classList.add('hidden');
+            }, 5000);
+          } else {
+            throw new Error('Erreur lors de l\'envoi');
+          }
+        } catch (error) {
+          formStatus.textContent = '❌ Erreur lors de l\'envoi. Veuillez réessayer ou m\'envoyer un email directement à razananirianatoky@gmail.com';
+          formStatus.className = 'mt-3 text-sm text-red-400';
+          
+          setTimeout(() => {
+            formStatus.classList.add('hidden');
+          }, 8000);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
