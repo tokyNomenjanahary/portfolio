@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - RAZANANIRIANA Tokyo Nomenjanahary</title>
+  <title>Portfolio - RAZANANIRIANA Toky Nomenjanahary</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -132,7 +132,7 @@
               constante, j’améliore continuellement mes compétences afin de rester à jour avec les évolutions du web.
             </p>
           </div>
-          <div class="w-full bg-panel/85 border border-white/10 rounded-xl p-3 backdrop-blur">
+          <div class="w-full bg-panel/85 border border-white/10 rounded-xl p-3 backdrop-blur hidden">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80"
               alt="Portrait representatif" class="w-full h-64 object-cover rounded-lg border border-white/10" />
           </div>
@@ -142,7 +142,7 @@
             class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-white text-sm font-semibold hover:scale-[1.03] transition">
             Me contacter
           </a>
-          <a href="RAZANANIRIANA-TOKY-CV.pdf" download="RAZANANIRIANA-TOKY-CV.pdf" 
+          <a href="assets/cv/RAZANANIRIANA-TOKY-CV.pdf" download="assets/cv/RAZANANIRIANA-TOKY-CV.pdf" 
           class="px-5 py-2.5 rounded-lg border border-white/15 bg-white/5 text-sm font-semibold hover:bg-white/10 transition inline-block">
          Telecharger CV
        </a>
@@ -297,46 +297,122 @@
         </span>
       </h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <article class="rounded-xl bg-panel border border-white/10 p-4">
-          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80"
-            alt="Application de location" class="w-full h-36 object-cover rounded-lg border border-white/10" />
-          <h3 class="font-semibold">Application de location / colocation</h3>
-          <p class="mt-2 text-xs text-white/70">Développement et maintenance d'une application web de location
-            d'appartements avec Laravel.</p>
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/clinic.png" alt="Clinic Platform"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">Clinic Platform</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Gestion de clinique : dossiers patients, rendez-vous, POS et assistant IA.</p>
           <button type="button"
             class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
-            data-titre="Application de location / colocation"
-            data-description="Participation au développement et à la maintenance d'une application web de location et colocation d'appartements avec Laravel chez Tictac Family."
-            data-tech="PHP, Laravel, MySQL, Bootstrap"
-            data-image="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80">
+            data-titre="Clinic Platform – Gestion de clinique"
+            data-description="Plateforme de gestion et de digitalisation des activités d'une clinique, permettant la centralisation des dossiers patients, la gestion des rendez-vous, le suivi des consultations ainsi que l'organisation des services médicaux. Elle intègre également un système de POS (caisse, gestion des commandes, facturation, paiements) pour la gestion des activités financières de l'établissement, ainsi qu'un assistant IA facilitant l'aide à la prise de décision et l'assistance dans les tâches quotidiennes. La plateforme améliore la coordination des soins et la communication entre les patients et le personnel médical."
+            data-tech="PHP, Drupal (API), Thème custom, Modules custom, Vue.js, Tailwind CSS, JavaScript"
+            data-image="assets/img/clinic.png">
             Voir
           </button>
         </article>
-        <article class="rounded-xl bg-panel border border-white/10 p-4">
-          <img src="https://images.unsplash.com/photo-1551281044-8b7bd6d6d5ab?auto=format&fit=crop&w=1200&q=80"
-            alt="Gestion de plans de formation" class="w-full h-36 object-cover rounded-lg border border-white/10" />
-          <h3 class="font-semibold">Gestion de plans de formation</h3>
-          <p class="mt-2 text-xs text-white/70">Application web pour gérer les plans de formation en entreprise.</p>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/staydirectsm.png" alt="StayDirectTech"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">StayDirectTech</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Plateforme multi-sites Drupal pour la réservation de locations courte durée.</p>
           <button type="button"
             class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
-            data-titre="Gestion de plans de formation"
-            data-description="Développement d'une application web de gestion des plans de formation pour entreprise chez NUMERIKA."
-            data-tech="PHP, MySQL, Laravel"
-            data-image="https://images.unsplash.com/photo-1551281044-8b7bd6d6d5ab?auto=format&fit=crop&w=1200&q=80">
+            data-titre="StayDirectTech"
+            data-description="Plateforme multi-sites basée sur Drupal permettant la génération de sites de réservation pour locations de courte durée. Chaque site créé peut être personnalisé par l'utilisateur (contenus, informations des hébergements, règles de réservation, etc.) et dispose d'un espace d'administration dédié. La solution permet aux propriétaires de gérer leurs logements, disponibilités et réservations tout en bénéficiant d'une interface indépendante et adaptable à chaque projet."
+            data-tech="Drupal, Thème custom, Modules custom, PHP, Twig, CSS, JavaScript"
+            data-image="assets/img/staydirectsm.png">
             Voir
           </button>
         </article>
-        <article class="rounded-xl bg-panel border border-white/10 p-4">
-          <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
-            alt="Marketplace" class="w-full h-36 object-cover rounded-lg border border-white/10" />
-          <h3 class="font-semibold">Marketplace</h3>
-          <p class="mt-2 text-xs text-white/70">Développement d'une marketplace en mode agile avec Laravel.</p>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/bongolavasm.png" alt="Bongolava Platform"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">Bongolava Platform</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Insertion professionnelle : mise en relation jeunes talents, entreprises et institutions.</p>
           <button type="button"
             class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
-            data-titre="Marketplace"
-            data-description="Participation au développement d'un projet de marketplace en mode agile, implémentation des fonctionnalités avec Laravel et transformation de maquettes UI/UX."
-            data-tech="PHP, Laravel, Bootstrap 4, JavaScript, Figma"
-            data-image="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80">
+            data-titre="Bongolava Platform"
+            data-description="Plateforme dédiée à l'insertion professionnelle dans la région de Bongolava, connectant les jeunes talents, les entreprises et les institutions afin de faciliter l'accès à l'emploi et aux opportunités professionnelles. Elle propose un espace candidats pour consulter et postuler aux offres, ainsi qu'un espace recruteurs permettant de publier des offres et d'identifier des profils adaptés aux besoins du marché local."
+            data-tech="Drupal, PHP, Twig, CSS, Vue.js, Modules custom"
+            data-image="assets/img/bongolavasm.png">
+            Voir
+          </button>
+        </article>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/eroso-admin.png" alt="Eroso Administration e-commerce"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">Eroso – Administration e-commerce</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Pilotage centralisé des produits, commandes, clients et contenus e-commerce.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Eroso – Administration e-commerce"
+            data-description="Plateforme d'administration dédiée à la gestion d'un site e-commerce, permettant le pilotage centralisé des produits, commandes, clients et contenus. Elle offre un tableau de bord complet pour suivre les ventes, gérer les stocks, traiter les commandes et organiser les livraisons. La solution intègre une interface web moderne ainsi qu'une application mobile pour faciliter la gestion à distance."
+            data-tech="Drupal, PHP, Twig, CSS, Vue.js, Ionic, Modules custom"
+            data-image="assets/img/eroso-admin.png">
+            Voir
+          </button>
+        </article>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/gv-sm.png" alt="Green Vanilla"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">Green Vanilla</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">E-commerce de vanille malgache : gousses, poudres et produits dérivés.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Green Vanilla"
+            data-description="Plateforme e-commerce spécialisée dans la distribution de vanille de Madagascar, proposant des gousses de vanille, poudres et produits dérivés destinés à la cuisine, à la pâtisserie et à la fabrication d'extraits. Elle met en avant une vanille naturelle issue de producteurs locaux, avec une gamme de produits orientée vers les particuliers et les professionnels."
+            data-tech="PHP, Drupal, Thème custom, Modules custom, Twig, CSS, JavaScript"
+            data-image="assets/img/gv-sm.png">
+            Voir
+          </button>
+        </article>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/hydraudrill.png" alt="HydrauDrill Madagascar"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">HydrauDrill Madagascar</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Site vitrine de forage hydraulique et d'approvisionnement en eau à Madagascar.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="HydrauDrill Madagascar"
+            data-description="Site vitrine présentant les services de forage hydraulique de l'entreprise, ses réalisations, ses projets et ses solutions d'approvisionnement en eau à Madagascar. Le site permet aux visiteurs de découvrir les différentes prestations proposées, consulter les projets réalisés et effectuer des demandes de contact ou de devis."
+            data-tech="Drupal, PHP, Twig, CSS, JavaScript, Modules custom"
+            data-image="assets/img/hydraudrill.png">
+            Voir
+          </button>
+        </article>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/miray-vina.png" alt="Miray Vina"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">Miray Vina</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Application multi-rôles avec back-office d'administration centralisé.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Miray Vina"
+            data-description="Application web full-stack développée avec Laravel (PHP) et JavaScript (AJAX). Elle repose sur une architecture multi-rôles (administrateur, porteur de projet, entreprise, bailleur de fonds) avec un back-office d'administration complet permettant la gestion centralisée de l'ensemble de la plateforme."
+            data-tech="Laravel, JavaScript, Bootstrap 5"
+            data-image="assets/img/miray-vina.png">
+            Voir
+          </button>
+        </article>
+
+        <article class="rounded-xl bg-panel border border-white/10 p-4 flex flex-col">
+          <img src="assets/img/bailti.png" alt="Bailti"
+            class="w-full h-36 object-cover rounded-lg border border-white/10" />
+          <h3 class="mt-3 font-semibold">Bailti</h3>
+          <p class="mt-2 text-xs text-white/70 flex-grow">Plateforme sociale de colocation et location immobilière.</p>
+          <button type="button"
+            class="btn-projet mt-3 px-4 py-2 rounded-lg bg-gradient-to-r from-accentPurple to-accentGreen text-xs font-semibold"
+            data-titre="Bailti"
+            data-description="Plateforme sociale dédiée à la colocation et à la location immobilière, permettant de mettre en relation locataires, colocataires et propriétaires. Elle facilite la recherche de logement grâce à des profils utilisateurs, des groupes de colocation et un système de mise en relation basé sur les besoins et affinités. Un espace propriétaire permet de gérer les biens immobiliers, les annonces, les candidatures et les échanges avec les intéressés, afin d'optimiser la gestion des locations."
+            data-tech="Laravel, JavaScript, Bootstrap 5"
+            data-image="assets/img/bailti.png">
             Voir
           </button>
         </article>
@@ -378,7 +454,12 @@
 
           <div class="rounded-xl bg-panelSoft border border-white/10 p-5">
             <h3 class="text-lg font-semibold">Formulaire de contact</h3>
-            <form id="contactForm" class="grid md:grid-cols-2 gap-3 mt-4">
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              class="grid md:grid-cols-2 gap-3 mt-4">
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden">
+                <label>Ne pas remplir : <input name="bot-field" /></label>
+              </p>
               <input type="text" id="nom" name="nom" placeholder="Nom" required
                 class="w-full rounded-lg bg-panel border border-white/10 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accentPurple" />
               <input type="email" id="email" name="email" placeholder="Email" required
@@ -400,15 +481,17 @@
       aria-hidden="true">
       <div class="w-full max-w-2xl rounded-2xl border border-white/10 bg-panel p-4 sm:p-6 relative">
         <button type="button" id="fermer-modal"
-          class="absolute top-3 right-3 rounded-lg bg-white/10 hover:bg-white/20 px-3 py-1 text-sm">
+          class="absolute top-3 right-3 rounded-lg bg-red-600 hover:bg-red-500 text-white px-3 py-1.5 text-sm font-semibold shadow-lg shadow-red-900/40 transition">
           Fermer
         </button>
         <img id="modal-image" src="" alt="Apercu projet"
           class="w-full h-56 sm:h-72 object-cover rounded-lg border border-white/10" />
         <h3 id="modal-titre" class="mt-4 text-xl font-bold"></h3>
-        <p id="modal-description" class="mt-2 text-sm text-white/75"></p>
-        <p class="mt-3 text-xs uppercase tracking-widest text-white/50">Technologies utilisees</p>
-        <p id="modal-tech" class="mt-1 text-sm text-white/90"></p>
+        <div class="mt-3">
+          <p class="text-xs uppercase tracking-widest text-white/50 mb-2">Technologies utilisées</p>
+          <div id="modal-tech" class="flex flex-wrap gap-2"></div>
+        </div>
+        <p id="modal-description" class="mt-4 text-sm text-white/75 leading-relaxed"></p>
       </div>
     </div>
   </main>
@@ -446,15 +529,36 @@
       const modalTech = document.getElementById("modal-tech");
       const modalImage = document.getElementById("modal-image");
 
+      const afficherBadgesTech = (techString) => {
+        modalTech.innerHTML = "";
+        if (!techString) return;
+
+        techString
+          .split(",")
+          .map((tech) => tech.trim())
+          .filter(Boolean)
+          .forEach((tech, index) => {
+            const badge = document.createElement("span");
+            const stylePair =
+              index % 2 === 0
+                ? "border-accentGreen/50 bg-accentGreen/15 text-emerald-200"
+                : "border-accentPurple/50 bg-accentPurple/15 text-purple-200";
+            badge.className = `px-2.5 py-1 rounded-full text-xs font-medium border ${stylePair}`;
+            badge.textContent = tech;
+            modalTech.appendChild(badge);
+          });
+      };
+
       document.querySelectorAll(".btn-projet").forEach((button) => {
         button.addEventListener("click", () => {
           modalTitre.textContent = button.dataset.titre || "";
+          afficherBadgesTech(button.dataset.tech || "");
           modalDescription.textContent = button.dataset.description || "";
-          modalTech.textContent = button.dataset.tech || "";
           modalImage.src = button.dataset.image || "";
           modal.classList.remove("hidden");
           modal.classList.add("flex");
           modal.setAttribute("aria-hidden", "false");
+          document.body.classList.add("overflow-hidden");
         });
       });
 
@@ -462,6 +566,7 @@
         modal.classList.add("hidden");
         modal.classList.remove("flex");
         modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("overflow-hidden");
       };
 
       fermerModalBtn.addEventListener("click", fermerModal);
@@ -473,42 +578,75 @@
       });
     });
 
-    // Formulaire de contact avec FormSubmit.co
+    // Netlify Forms en production ; FormSubmit en local (http). Incompatible avec file://
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
-    
+    const CONTACT_EMAIL = 'razananirianatoky@gmail.com';
+
+    const isLocalDev = () =>
+      ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
+    const submitContact = async ({ nom, email, message }) => {
+      if (window.location.protocol === 'file:') {
+        throw new Error('FILE_PROTOCOL');
+      }
+
+      if (isLocalDev()) {
+        return fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: nom,
+            email,
+            message,
+            _captcha: 'false',
+            _template: 'table',
+          }),
+        });
+      }
+
+      return fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          nom,
+          email,
+          message,
+        }).toString(),
+      });
+    };
+
     if (contactForm) {
+      if (window.location.protocol === 'file:') {
+        formStatus.textContent =
+          'Le formulaire ne fonctionne pas en ouvrant le fichier HTML directement. Lancez un serveur local (npx serve .) ou testez sur Netlify.';
+        formStatus.className = 'mt-3 text-sm text-amber-300';
+        formStatus.classList.remove('hidden');
+      }
+
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const nom = document.getElementById('nom').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-        
-        // Afficher le chargement
+
         formStatus.textContent = 'Envoi en cours...';
         formStatus.className = 'mt-3 text-sm text-blue-400';
         formStatus.classList.remove('hidden');
-        
-        // Préparer les données pour FormSubmit
-        const formData = new FormData();
-        formData.append('nom', nom);
-        formData.append('email', email);
-        formData.append('message', message);
-        formData.append('_captcha', 'false');
-        formData.append('_template', 'table');
-        
+
         try {
-          const response = await fetch('https://formsubmit.co/ajax/razananirianatoky@gmail.com', {
-            method: 'POST',
-            body: formData
-          });
-          
+          const response = await submitContact({ nom, email, message });
+
           if (response.ok) {
             formStatus.textContent = '✅ Message envoyé avec succès ! Je vous répondrai rapidement.';
             formStatus.className = 'mt-3 text-sm text-green-400';
             contactForm.reset();
-            
+
             setTimeout(() => {
               formStatus.classList.add('hidden');
             }, 5000);
@@ -516,9 +654,15 @@
             throw new Error('Erreur lors de l\'envoi');
           }
         } catch (error) {
-          formStatus.textContent = '❌ Erreur lors de l\'envoi. Veuillez réessayer ou m\'envoyer un email directement à razananirianatoky@gmail.com';
-          formStatus.className = 'mt-3 text-sm text-red-400';
-          
+          if (error.message === 'FILE_PROTOCOL') {
+            formStatus.textContent =
+              '⚠️ Ouvrez le site via http:// (npx serve . dans le dossier du projet) ou sur votre URL Netlify, pas en double-cliquant sur index.html.';
+            formStatus.className = 'mt-3 text-sm text-amber-300';
+          } else {
+            formStatus.textContent = `❌ Erreur lors de l'envoi. Réessayez ou écrivez-moi à ${CONTACT_EMAIL}`;
+            formStatus.className = 'mt-3 text-sm text-red-400';
+          }
+
           setTimeout(() => {
             formStatus.classList.add('hidden');
           }, 8000);

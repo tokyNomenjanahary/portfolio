@@ -1,0 +1,26 @@
+1- Clinic Platform – Gestion de clinique (PHP, Drupal (api), Theme custom, Modules custom, VueJs, Tailwind CSS, JavaScript)
+Plateforme de gestion et de digitalisation des activités d’une clinique, permettant la centralisation des dossiers patients, la gestion des rendez-vous, le suivi des consultations ainsi que l’organisation des services médicaux. Elle intègre également un système de POS (caisse, gestion des commandes, facturation, paiements) pour la gestion des activités financières de l’établissement, ainsi qu’un assistant IA facilitant l’aide à la prise de décision et l’assistance dans les tâches quotidiennes. La plateforme améliore la coordination des soins et la communication entre les patients et le personnel médical.
+
+
+2- StayDirectTech (Drupal,Theme custom, Modules custom, PHP, Twig, CSS, JavaScript)
+Plateforme multi-sites basée sur Drupal permettant la génération de sites de réservation pour locations de courte durée. Chaque site créé peut être personnalisé par l’utilisateur (contenus, informations des hébergements, règles de réservation, etc.) et dispose d’un espace d’administration dédié. La solution permet aux propriétaires de gérer leurs logements, disponibilités et réservations tout en bénéficiant d’une interface indépendante et adaptable à chaque projet.
+
+3- Bongolava Platform (Drupal, PHP, Twig, CSS, VueJs, Modules custom)
+Plateforme dédiée à l’insertion professionnelle dans la région de Bongolava, connectant les jeunes talents, les entreprises et les institutions afin de faciliter l’accès à l’emploi et aux opportunités professionnelles. Elle propose un espace candidats pour consulter et postuler aux offres, ainsi qu’un espace recruteurs permettant de publier des offres et d’identifier des profils adaptés aux besoins du marché local.
+
+4- Eroso – Administration e-commerce  (Drupal, PHP, Twig, CSS, VueJs, Ionic, Modules custom)
+Plateforme d’administration dédiée à la gestion d’un site e-commerce, permettant le pilotage centralisé des produits, commandes, clients et contenus. Elle offre un tableau de bord complet pour suivre les ventes, gérer les stocks, traiter les commandes et organiser les livraisons. La solution intègre une interface web moderne ainsi qu’une application mobile pour faciliter la gestion à distance.
+
+5- Green Vanilla (PHP, Drupal, theme custom, Modules custom, Twig, CSS, JavaScript)
+Plateforme e-commerce spécialisée dans la distribution de vanille de Madagascar, proposant des gousses de vanille, poudres et produits dérivés destinés à la cuisine, à la pâtisserie et à la fabrication d’extraits. Elle met en avant une vanille naturelle issue de producteurs locaux, avec une gamme de produits orientée vers les particuliers et les professionnels.
+
+
+6- HydrauDrill Madagascar (Drupal, PHP, Twig, CSS, JavaScript, Modules custom)
+Site vitrine présentant les services de forage hydraulique de l’entreprise, ses réalisations, ses projets et ses solutions d’approvisionnement en eau à Madagascar. Le site permet aux visiteurs de découvrir les différentes prestations proposées, consulter les projets réalisés et effectuer des demandes de contact ou de devis.
+
+
+7- Miray Vina (Laravel, JavaScript, Bootstrap 5)
+Est une application web full-stack développée avec Laravel (PHP) et JavaScript (AJAX). Elle repose sur une architecture multi-rôles (administrateur, porteur de projet, entreprise, bailleur de fonds) avec un back-office d'administration complet permettant la gestion centralisée de l'ensemble de la plateforme.
+
+8- Bailti (Laravel, JavaScript, Bootstrap 5)
+Plateforme sociale dédiée à la colocation et à la location immobilière, permettant de mettre en relation locataires, colocataires et propriétaires. Elle facilite la recherche de logement grâce à des profils utilisateurs, des groupes de colocation et un système de mise en relation basé sur les besoins et affinités. Un espace propriétaire permet de gérer les biens immobiliers, les annonces, les candidatures et les échanges avec les intéressés, afin d’optimiser la gestion des locations.
