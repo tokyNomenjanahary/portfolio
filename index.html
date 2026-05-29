@@ -454,12 +454,7 @@
 
           <div class="rounded-xl bg-panelSoft border border-white/10 p-5">
             <h3 class="text-lg font-semibold">Formulaire de contact</h3>
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-              class="grid md:grid-cols-2 gap-3 mt-4">
-              <input type="hidden" name="form-name" value="contact" />
-              <p class="hidden">
-                <label>Ne pas remplir : <input name="bot-field" /></label>
-              </p>
+            <form id="contactForm" class="grid md:grid-cols-2 gap-3 mt-4">
               <input type="text" id="nom" name="nom" placeholder="Nom" required
                 class="w-full rounded-lg bg-panel border border-white/10 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-accentPurple" />
               <input type="email" id="email" name="email" placeholder="Email" required
@@ -578,46 +573,102 @@
       });
     });
 
-    // Netlify Forms en production ; FormSubmit en local (http). Incompatible avec file://
+    // FormSubmit.co — AJAX si possible, sinon envoi classique via iframe (pas de CORS)
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
     const CONTACT_EMAIL = 'razananirianatoky@gmail.com';
+    const FORMSUBMIT_URL = `https://formsubmit.co/${encodeURIComponent(CONTACT_EMAIL)}`;
 
-    const isLocalDev = () =>
-      ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    const submitViaIframe = ({ nom, email, message }) =>
+      new Promise((resolve, reject) => {
+        let iframe = document.getElementById('formsubmit-frame');
+        if (!iframe) {
+          iframe = document.createElement('iframe');
+          iframe.id = 'formsubmit-frame';
+          iframe.name = 'formsubmit-frame';
+          iframe.hidden = true;
+          iframe.title = 'Envoi formulaire';
+          document.body.appendChild(iframe);
+        }
+
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = FORMSUBMIT_URL;
+        form.target = 'formsubmit-frame';
+        form.style.display = 'none';
+
+        const fields = {
+          name: nom,
+          email,
+          message,
+          _subject: `Portfolio - message de ${nom}`,
+          _captcha: 'false',
+          _template: 'table',
+          _autoresponse: 'Merci pour votre message. Je vous répondrai rapidement.',
+        };
+
+        Object.entries(fields).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value;
+          form.appendChild(input);
+        });
+
+        const timeout = setTimeout(() => {
+          form.remove();
+          resolve();
+        }, 2500);
+
+        iframe.addEventListener(
+          'load',
+          () => {
+            clearTimeout(timeout);
+            form.remove();
+            resolve();
+          },
+          { once: true }
+        );
+
+        document.body.appendChild(form);
+        form.submit();
+      });
 
     const submitContact = async ({ nom, email, message }) => {
       if (window.location.protocol === 'file:') {
         throw new Error('FILE_PROTOCOL');
       }
 
-      if (isLocalDev()) {
-        return fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            name: nom,
-            email,
-            message,
-            _captcha: 'false',
-            _template: 'table',
-          }),
-        });
-      }
+      try {
+        const response = await fetch(
+          `https://formsubmit.co/ajax/${encodeURIComponent(CONTACT_EMAIL)}`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify({
+              name: nom,
+              email,
+              message,
+              _subject: `Portfolio - message de ${nom}`,
+              _replyto: email,
+              _captcha: 'false',
+              _template: 'table',
+            }),
+          }
+        );
 
-      return fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          nom,
-          email,
-          message,
-        }).toString(),
-      });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || data.success === 'false') {
+          throw new Error(data.message || 'ajax_failed');
+        }
+
+        return data;
+      } catch {
+        await submitViaIframe({ nom, email, message });
+      }
     };
 
     if (contactForm) {
@@ -640,19 +691,15 @@
         formStatus.classList.remove('hidden');
 
         try {
-          const response = await submitContact({ nom, email, message });
+          await submitContact({ nom, email, message });
 
-          if (response.ok) {
-            formStatus.textContent = '✅ Message envoyé avec succès ! Je vous répondrai rapidement.';
-            formStatus.className = 'mt-3 text-sm text-green-400';
-            contactForm.reset();
+          formStatus.textContent = '✅ Message envoyé avec succès ! Je vous répondrai rapidement.';
+          formStatus.className = 'mt-3 text-sm text-green-400';
+          contactForm.reset();
 
-            setTimeout(() => {
-              formStatus.classList.add('hidden');
-            }, 5000);
-          } else {
-            throw new Error('Erreur lors de l\'envoi');
-          }
+          setTimeout(() => {
+            formStatus.classList.add('hidden');
+          }, 5000);
         } catch (error) {
           if (error.message === 'FILE_PROTOCOL') {
             formStatus.textContent =
